@@ -1,0 +1,16 @@
+
+<div class="form-group">
+    <label class="col-sm-2 control-label" for="input-api-key">{{ entry_api_key }}</label>
+    <div class="col-sm-10">
+        <input type="text" name="payment_coinpay24_api_key" value="{{ payment_coinpay24_api_key }}" placeholder="{{ entry_api_key }}" id="input-api-key" class="form-control" />
+    </div>
+</div>
+<div class="form-group">
+    <label class="col-sm-2 control-label" for="input-status">{{ entry_status }}</label>
+    <div class="col-sm-10">
+        <select name="payment_coinpay24_status" id="input-status" class="form-control">
+            <option value="1" {% if payment_coinpay24_status %}selected{% endif %}>{{ text_enabled }}</option>
+            <option value="0" {% if not payment_coinpay24_status %}selected{% endif %}>{{ text_disabled }}</option>
+        </select>
+    </div>
+</div>
